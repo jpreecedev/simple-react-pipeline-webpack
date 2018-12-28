@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "webpack --mode development --module-bind js=babel-loader",
     "build:prod": "webpack --mode production --module-bind js=babel-loader",
-    "start": "http-server -o -p 4457"
+    "start": "http-server -o -p 4457",
+    "start:hmr": "webpack-dev-server --hot --mode=development --module-bind js=babel-loader --port=5589 --plugin common-config-webpack-plugin --plugin html-webpack-plugin"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +17,12 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "common-config-webpack-plugin": "^1.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react-hot-loader": "^4.6.3",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.13"
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "react": "^16.7.0",
