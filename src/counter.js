@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "./counter.module.scss";
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +33,12 @@ class Counter extends React.Component {
     return (
       <div>
         <p>The current count is {count}</p>
-        <button onClick={() => this.updateCount(true)}>Increment</button>
+        <button
+          className={styles.button}
+          onClick={() => this.updateCount(true)}
+        >
+          Increment
+        </button>
         <button onClick={() => this.updateCount(false)}>Decrement</button>
       </div>
     );
