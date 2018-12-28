@@ -28,30 +28,12 @@ class Counter extends React.Component {
   render() {
     const { count } = this.state;
 
-    return React.createElement(
-      "div",
-      null,
-      React.createElement("p", null, "The current count is ", count),
-      React.createElement(
-        "button",
-        {
-          type: "button",
-          onClick: () => {
-            return this.updateCount(true);
-          }
-        },
-        "Increment"
-      ),
-      React.createElement(
-        "button",
-        {
-          type: "button",
-          onClick: () => {
-            return this.updateCount(false);
-          }
-        },
-        "Decrement"
-      )
+    return (
+      <div>
+        <p>The current count is {count}</p>
+        <button onClick={() => this.updateCount(true)}>Increment</button>
+        <button onClick={() => this.updateCount(false)}>Decrement</button>
+      </div>
     );
   }
 }

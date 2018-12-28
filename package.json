@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development --module-bind js=babel-loader",
+    "build:prod": "webpack --mode production --module-bind js=babel-loader",
     "start": "http-server -o -p 4457"
   },
   "keywords": [],
@@ -13,6 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
